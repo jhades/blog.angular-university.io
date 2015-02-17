@@ -1,7 +1,68 @@
 <DOCTYPE! html>
 <html>
   <head>
+    <link rel="stylesheet" href="./bower_components/pure/pure.css">
+    <link rel="stylesheet" href="./demo.css">
   </head>
   <body>
+
+    <div class="container" ng-app="DemoApp">
+      <form class="pure-form pure-form-aligned" name="frm" method="post"
+        novalidate autocomplete="off">
+          <fieldset>
+
+              <div class="pure-control-group">
+                  <label>Username</label>
+                  <input name="username" ng-model="user.username" type="text" placeholder="Username" required>
+                  <div class="field-message" ng-messages="frm.username.$error" ng-if='frm.username.$dirty' ng-cloak>
+                    <div ng-message="required">Username is required</div>
+                  </div>
+              </div>
+
+              <div class="pure-control-group">
+                  <label>Password</label>
+                  <input name="password"
+                  ng-model="user.password"
+                  type="password"
+                  placeholder="Password"
+                  required
+                  ng-minlength="6"
+                  ng-maxlength="10">
+                  <div class="field-message" ng-messages="frm.password.$error" ng-if='frm.password.$dirty' ng-cloak>
+                    <div ng-message="required">Password is required</div>
+                    <div ng-message="minlength">Password must have minimum 6 characters</div>
+                    <div ng-message="maxlength">Password must have maximum 10 characters</div>
+                  </div>
+              </div>
+
+              <div class="pure-control-group">
+                  <label>Email Address</label>
+                  <input name="email"
+                    ng-model="user.email"
+                    type="email"
+                    placeholder="Email Address"
+                    required>
+                    <div class="field-message" ng-messages="frm.email.$error" ng-if='frm.email.$dirty' ng-cloak>
+                      <div ng-message="required">Email is required</div>
+                      <div ng-message="email">Must be a valid email</div>
+                    </div>
+              </div>
+
+              <div class="pure-controls">
+                  <label class="pure-checkbox">
+                      <input name="conditions" ng-model="conditions" type="checkbox">
+                      I've read the terms and conditions
+                  </label>
+                  <button type="submit" class="pure-button pure-button-primary"
+                   ng-disabled="frm.$invalid || !conditions">Submit</button>
+              </div>
+          </fieldset>
+      </form>
+    </div>
+
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-messages/angular-messages.js"></script>
+    <script src="./demo.js"></script>
+
   </body>
 </html>
