@@ -26,3 +26,15 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+
+node_modules
+.tmp
+.sass-cache
+.idea
+*.iml
+target/
+target/**
+bower_components
+
+
+

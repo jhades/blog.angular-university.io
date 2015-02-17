@@ -1,0 +1,23 @@
+{
+  "name": "angular-not-only-spa",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jhades/blog.jhades.org",
+  "authors": [
+    "jhades.dev@gmail.com"
+  ],
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "purecss": "~0.5.0"
+  }
+}
