@@ -6,7 +6,6 @@ The project is based on the the [angular2-seed](https://github.com/mgechev/angul
 # Running instructions
 
     npm install
-    gulp 
     gulp serve.dev
 
 
