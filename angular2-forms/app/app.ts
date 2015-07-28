@@ -1,9 +1,7 @@
 /// <reference path="typings/_custom.d.ts" />
-import {Component, View, bootstrap} from 'angular2/angular2';
-import {formDirectives} from 'angular2/forms';
-import {RouteConfig, RouterOutlet, RouterLink, routerInjectables} from 'angular2/router';
-
-
+import {Component, View, bootstrap, Inject} from 'angular2/angular2';
+import {formDirectives, ControlGroup, Validators, formInjectables, FormBuilder} from 'angular2/forms';
+import {} from "angular2/di";
 
 @Component({
   selector: 'app'
@@ -12,7 +10,17 @@ import {RouteConfig, RouterOutlet, RouterLink, routerInjectables} from 'angular2
   templateUrl: './app.html?v=<%= VERSION %>',
   directives: [formDirectives]
 })
-class App {}
+class App {
+
+    form:any;
+
+    constructor(@Inject(FormBuilder) fb: FormBuilder) {
+        this.form = fb.group({
+            "firstname":[Validators.required]
+        });
+    }
+
+}
 
 
-bootstrap(App, [routerInjectables]);
+bootstrap(App, [formInjectables]);
