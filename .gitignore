@@ -72,3 +72,6 @@ dist
 dev
 lib
 test
+
+.DS_Store
+
