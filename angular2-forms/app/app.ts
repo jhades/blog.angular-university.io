@@ -56,6 +56,14 @@ class App {
         this.firstName.updateValue("Hello ");
     }
 
+    onChangeWholeForm() {
+        debugger;
+        this.form.updateValueAndValidity({
+            firstName: 'Hello',
+            lastName: 'World'
+        }, false);
+    }
+
 }
 
 
