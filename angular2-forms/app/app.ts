@@ -16,7 +16,11 @@ class App {
 
     constructor(@Inject(FormBuilder) fb: FormBuilder) {
         this.form = fb.group({
-            "firstname":["", Validators.required]
+            "firstName":["", Validators.required],
+            "lastName":["", Validators.required],
+            "password":["", Validators.required],
+            "birthDate":["", Validators.required],
+            "weight":["", Validators.required]
         });
     }
 
