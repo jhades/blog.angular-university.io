@@ -22,6 +22,11 @@ class App {
             "birthDate":["", Validators.required],
             "weight":["", Validators.required]
         });
+
+        this.form.valueChanges.toRx().map((value) =>value).subscribe((value) => {
+            console.log(value);
+        });
+
     }
 
     onSubmit() {
