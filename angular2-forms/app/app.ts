@@ -23,12 +23,21 @@ class App {
             "weight":["", Validators.required]
         });
 
+        // observe the full form as a whole
         this.form.valueChanges.toRx().map((value) =>value).subscribe((value) => {
             // apply complex cross field validations
             // pre-save the form in the background
             // make the form data immutable
             console.log(value);
         });
+
+        // observe only one field
+        this.form.controls.firstName.valueChanges.observer({
+            next: (value) => {
+                console.log('first name changed = ' + value);
+            }
+        });
+
     }
 
     onSubmitTemplateBased() {
