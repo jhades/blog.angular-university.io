@@ -58,6 +58,7 @@ class App {
 
     onChangeWholeForm() {
         debugger;
+        //TODO how to update whole form
         this.form.updateValueAndValidity({
             firstName: 'Hello',
             lastName: 'World'
