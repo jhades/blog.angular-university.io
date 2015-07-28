@@ -1,6 +1,6 @@
 /// <reference path="typings/_custom.d.ts" />
 import {Component, View, bootstrap, Inject} from 'angular2/angular2';
-import {formDirectives, ControlGroup, Validators, formInjectables, FormBuilder} from 'angular2/forms';
+import {formDirectives, ControlGroup, Validators, formInjectables, FormBuilder, Control} from 'angular2/forms';
 import {} from "angular2/di";
 
 @Component({
@@ -12,11 +12,12 @@ import {} from "angular2/di";
 })
 class App {
 
+    firstName: Control = new Control("", Validators.required);
     tfm: Object = {};
 
     constructor(@Inject(FormBuilder) fb: FormBuilder) {
         this.form = fb.group({
-            "firstName":["", Validators.required],
+            "firstName": this.firstName,
             "lastName":["", Validators.required],
             "password":["", Validators.required],
             "birthDate":["", Validators.required],
@@ -52,7 +53,7 @@ class App {
     }
 
     onChangeFirstName() {
-        this.form.controls.firstName.value = "Hello ";
+        this.firstName.updateValue("Hello ");
     }
 
 }
