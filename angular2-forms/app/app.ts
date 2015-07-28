@@ -41,6 +41,11 @@ class App {
         console.log("model-based form submitted");
         console.log(this.form);
     }
+
+    onChangeFirstName() {
+        this.form.value.firstName = "Hello ";
+    }
+
 }
 
 
