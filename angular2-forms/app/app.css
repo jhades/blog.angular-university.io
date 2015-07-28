@@ -3,19 +3,15 @@
 }
 .sample-app-content h1 {
   color: #999999;
-  font-size: 3em;
+  font-size: 1em;
 }
 .sample-app-content h2 {
   color: #990000;
   font-size: 2em;
 }
-.sample-app-content p,
-.sample-app-content nav {
-  padding: 30px;
-}
 .sample-app-content li,
 .sample-app-content p {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 .sample-app-content li {
   font-family: Consolas;
@@ -29,4 +25,13 @@
   padding: 5px;
   font-size: 1em;
   outline: none;
+}
+
+form {
+  width: 350px;
+  text-align: right;
+}
+
+form input {
+  width:200px;
 }

@@ -1,5 +1,6 @@
 /// <reference path="typings/_custom.d.ts" />
 import {Component, View, bootstrap} from 'angular2/angular2';
+import {formDirectives} from 'angular2/forms';
 import {RouteConfig, RouterOutlet, RouterLink, routerInjectables} from 'angular2/router';
 
 
@@ -9,7 +10,7 @@ import {RouteConfig, RouterOutlet, RouterLink, routerInjectables} from 'angular2
 })
 @View({
   templateUrl: './app.html?v=<%= VERSION %>',
-  directives: [RouterOutlet, RouterLink]
+  directives: [formDirectives]
 })
 class App {}
 

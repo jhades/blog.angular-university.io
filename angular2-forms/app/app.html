@@ -1,5 +1,24 @@
 <section class="sample-app-content">
 
-  <h1>Hello World</h1>
+    <h1>Model-based Form Example:</h1>
+
+    <form [ng-form-model]="form">
+        <p>
+            <label>First Name:</label>
+            <input type="text">
+        </p>
+        <p>
+            <label>Last Name:</label>
+            <input type="text">
+        </p>
+        <p>
+            <label>Birth Date:</label>
+            <input type="date">
+        </p>
+        <p>
+            <label>Weight:</label>
+            <input type="number">
+        </p>
+    </form>
 
 </section>
