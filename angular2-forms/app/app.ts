@@ -12,7 +12,7 @@ import {} from "angular2/di";
 })
 class App {
 
-    form:any;
+    tfm: Object = {};
 
     constructor(@Inject(FormBuilder) fb: FormBuilder) {
         this.form = fb.group({
@@ -26,11 +26,17 @@ class App {
         this.form.valueChanges.toRx().map((value) =>value).subscribe((value) => {
             console.log(value);
         });
-
     }
 
-    onSubmit() {
-        console.log("form submitted");
+    onSubmitTemplateBased() {
+        console.log("template-based form submitted");
+        console.log(this.tfm);
+    }
+
+
+    onSubmitModelBased() {
+        console.log("model-based form submitted");
+        console.log(this.form);
     }
 }
 
