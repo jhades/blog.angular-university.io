@@ -24,6 +24,9 @@ class App {
         });
     }
 
+    onSubmit() {
+        console.log("form submitted");
+    }
 }
 
 
