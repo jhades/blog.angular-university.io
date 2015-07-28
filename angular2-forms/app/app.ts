@@ -52,7 +52,7 @@ class App {
     }
 
     onChangeFirstName() {
-        this.form.value.firstName = "Hello ";
+        this.form.controls.firstName.value = "Hello ";
     }
 
 }
