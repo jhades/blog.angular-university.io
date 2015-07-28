@@ -24,6 +24,9 @@ class App {
         });
 
         this.form.valueChanges.toRx().map((value) =>value).subscribe((value) => {
+            // apply complex cross field validations
+            // pre-save the form in the background
+            // make the form data immutable
             console.log(value);
         });
     }
