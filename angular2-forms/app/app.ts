@@ -16,7 +16,7 @@ class App {
 
     constructor(@Inject(FormBuilder) fb: FormBuilder) {
         this.form = fb.group({
-            "firstname":[Validators.required]
+            "firstname":["", Validators.required]
         });
     }
 
