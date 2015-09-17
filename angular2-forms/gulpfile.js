@@ -3,7 +3,8 @@ var gulp = require('gulp');
 var PATHS = {
     src: {
         js: 'src/**/*.ts',
-        html: 'src/**/*.html'
+        html: 'src/**/*.html',
+        css: 'src/**/*.css'
     },
     lib: [
         'node_modules/angular2/node_modules/traceur/bin/traceur-runtime.js',
@@ -36,11 +37,15 @@ gulp.task('html', function () {
     return gulp.src(PATHS.src.html).pipe(gulp.dest('dist'));
 });
 
+gulp.task('css', function () {
+    return gulp.src(PATHS.src.css).pipe(gulp.dest('dist'));
+});
+
 gulp.task('libs', function () {
     return gulp.src(PATHS.lib).pipe(gulp.dest('dist/lib'));
 });
 
-gulp.task('default', ['libs', 'html', 'js'], function () {
+gulp.task('default', ['libs', 'html', 'js','css'], function () {
     var http = require('http');
     var connect = require('connect');
     var serveStatic = require('serve-static');
