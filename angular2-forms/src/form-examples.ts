@@ -10,6 +10,7 @@ import {FORM_DIRECTIVES, ControlGroup, Validators, FORM_BINDINGS, FormBuilder, C
 })
 export class Hello {
 
+    tfm: Object = {};
     firstName: Control = new Control("", Validators.required);
 
     constructor(fb: FormBuilder) {
@@ -21,7 +22,7 @@ export class Hello {
             "weight":["", Validators.required]
         });
 
-/*
+
         // observe the full form as a whole
         this.form.valueChanges.toRx().map((value) =>value).subscribe((value) => {
             // apply complex cross field validations
@@ -35,10 +36,10 @@ export class Hello {
             next: (value) => {
                 console.log('first name changed = ' + value);
             }
-        });*/
+        });
 
     }
-/*
+
 
     onSubmitTemplateBased() {
         console.log("template-based form submitted");
@@ -62,7 +63,7 @@ export class Hello {
             firstName: 'Hello',
             lastName: 'World'
         }, false);
-    }*/
+    }
 
 
 }
