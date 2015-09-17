@@ -1,0 +1,33 @@
+<section class="sample-app-content">
+
+    <h1>Model-based Form Example:</h1>
+
+    <form [ng-form-model]="form" (ng-submit)="onSubmit()">
+        <p>
+            <label>First Name:</label>
+            <input type="text" ng-control="firstName">
+        </p>
+        <p>
+            <label>Last Name:</label>
+            <input type="text" ng-control="lastName">
+        </p>
+        <p>
+            <label>Password:</label>
+            <input type="password" ng-control="password">
+        </p>
+        <p>
+            <label>Birth Date:</label>
+            <input type="date" ng-control="birthDate">
+        </p>
+        <p>
+            <label>Weight:</label>
+            <input type="number" ng-control="weight">
+        </p>
+        <p>
+            <button type="submit" [disabled]="!form.valid">Submit</button>
+        </p>
+    </form>
+    <button (click)="onChangeFirstName()">Change First Name</button>
+    <button (click)="onChangeWholeForm()">Change Whole Form</button>
+
+</section>
