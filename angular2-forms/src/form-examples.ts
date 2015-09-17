@@ -5,7 +5,7 @@ import {FORM_DIRECTIVES, ControlGroup, Validators, FORM_BINDINGS, FormBuilder, C
     selector: 'hello'
 })
 @View({
-    templateUrl: 'app.html',
+    templateUrl: 'form-examples.html',
     directives: [CORE_DIRECTIVES, FORM_DIRECTIVES]
 })
 export class Hello {
@@ -21,7 +21,7 @@ export class Hello {
             "weight":["", Validators.required]
         });
 
-
+/*
         // observe the full form as a whole
         this.form.valueChanges.toRx().map((value) =>value).subscribe((value) => {
             // apply complex cross field validations
@@ -35,10 +35,10 @@ export class Hello {
             next: (value) => {
                 console.log('first name changed = ' + value);
             }
-        });
+        });*/
 
     }
-
+/*
 
     onSubmitTemplateBased() {
         console.log("template-based form submitted");
@@ -62,7 +62,7 @@ export class Hello {
             firstName: 'Hello',
             lastName: 'World'
         }, false);
-    }
+    }*/
 
 
 }
