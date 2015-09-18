@@ -1,70 +1,9 @@
 <div>
-    <section class="sample-app-content">
-
-        <h1>Template-based Form Example:</h1>
-
-        <form #f="form" (ng-submit)="onSubmitTemplateBased()">
-            <p>
-                <label>First Name:</label>
-                <input type="text" ng-control="firstName" [(ng-model)]="tfm.firstName" required>
-            </p>
-            <p>
-                <label>Last Name:</label>
-                <input type="text" ng-control="lastName" [(ng-model)]="tfm.lastName" required>
-            </p>
-            <p>
-                <label>Password:</label>
-                <input type="password" ng-control="password" [(ng-model)]="tfm.password" required>
-            </p>
-            <p>
-                <label>Birth Date:</label>
-                <input type="date" ng-control="birthDate" [(ng-model)]="tfm.birthDate" required>
-            </p>
-            <p>
-                <label>Weight:</label>
-                <input type="number" ng-control="weight" [(ng-model)]="tfm.weight" required>
-            </p>
-            <p>
-                <button type="submit" [disabled]="!f.valid">Submit</button>
-            </p>
-        </form>
-
-    </section>
 
 
-    <section class="sample-app-content">
+    <template-driven-form></template-driven-form>
 
-        <h1>Model-based Form Example:</h1>
-
-        <form [ng-form-model]="form" (ng-submit)="onSubmit()">
-            <p>
-                <label>First Name:</label>
-                <input type="text" ng-control="firstName">
-            </p>
-            <p>
-                <label>Last Name:</label>
-                <input type="text" ng-control="lastName">
-            </p>
-            <p>
-                <label>Password:</label>
-                <input type="password" ng-control="password">
-            </p>
-            <p>
-                <label>Birth Date:</label>
-                <input type="date" ng-control="birthDate">
-            </p>
-            <p>
-                <label>Weight:</label>
-                <input type="number" ng-control="weight">
-            </p>
-            <p>
-                <button type="submit" [disabled]="!form.valid">Submit</button>
-            </p>
-        </form>
-        <button (click)="onChangeFirstName()">Change First Name</button>
-        <button (click)="onChangeWholeForm()">Change Whole Form</button>
-
-    </section>
+    <model-driven-form></model-driven-form>
 
 
 </div>
