@@ -15,19 +15,23 @@ export class ModelDrivenForm {
     constructor(fb: FormBuilder) {
         this.form = fb.group({
             "firstName": this.firstName,
-            "lastName":["", Validators.required],
-            "password":["", Validators.required],
-            "birthDate":["", Validators.required],
-            "weight":["", Validators.required]
+            "password":["", Validators.required]
         });
 
 
         // observe the full form as a whole
-        this.form.valueChanges.toRx().map((value) =>value).subscribe((value) => {
-            // apply complex cross field validations
-            // pre-save the form in the background
-            // easy implementation of requirements like undo/redo of valid states
-            console.log(value);
+        // apply complex cross field validations
+        // pre-save the form in the background
+        // easy implementation of requirements like undo/redo of valid states
+        this.form.valueChanges.toRx()
+            .map((value) => {
+                value.firstName = value.firstName.toUpperCase();
+                return value;
+            })
+            .filter((value) => this.form.valid)
+            .subscribe((value) => {
+
+            alert("Model Driven Form valid value: vm = " + JSON.stringify(value));
         });
 
         // observe only one field
