@@ -10,6 +10,8 @@ import {FORM_DIRECTIVES, ControlGroup, Validators, FormBuilder, Control} from 'a
 })
 export class ModelDrivenForm {
 
+
+    form: ControlGroup;
     firstName: Control = new Control("", Validators.required);
 
     constructor(fb: FormBuilder) {
