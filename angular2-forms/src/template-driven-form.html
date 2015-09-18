@@ -5,23 +5,23 @@
     <form #f="form" (ng-submit)="onSubmitTemplateBased()">
         <p>
             <label>First Name:</label>
-            <input type="text" ng-control="firstName" [(ng-model)]="tfm.firstName" required>
+            <input type="text" ng-control="firstName" [(ng-model)]="vm.firstName" required>
         </p>
         <p>
             <label>Last Name:</label>
-            <input type="text" ng-control="lastName" [(ng-model)]="tfm.lastName" required>
+            <input type="text" ng-control="lastName" [(ng-model)]="vm.lastName" required>
         </p>
         <p>
             <label>Password:</label>
-            <input type="password" ng-control="password" [(ng-model)]="tfm.password" required>
+            <input type="password" ng-control="password" [(ng-model)]="vm.password" required>
         </p>
         <p>
             <label>Birth Date:</label>
-            <input type="date" ng-control="birthDate" [(ng-model)]="tfm.birthDate" required>
+            <input type="date" ng-control="birthDate" [(ng-model)]="vm.birthDate" required>
         </p>
         <p>
             <label>Weight:</label>
-            <input type="number" ng-control="weight" [(ng-model)]="tfm.weight" required>
+            <input type="number" ng-control="weight" [(ng-model)]="vm.weight" required>
         </p>
         <p>
             <button type="submit" [disabled]="!f.valid">Submit</button>

@@ -11,11 +11,11 @@ import {FORM_DIRECTIVES} from 'angular2/forms';
 })
 export class TemplateDrivenForm {
 
-    tfm: Object = {};
+    vm: Object = {};
 
     onSubmitTemplateBased() {
-        console.log("template-based form submitted");
-        console.log(this.tfm);
+        alert("Template Driven Form submitted: vm = " + JSON.stringify(this.vm));
+        console.log(this.vm);
     }
 
 }
