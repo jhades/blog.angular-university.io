@@ -26,7 +26,7 @@ export class ModelDrivenForm {
         this.form.valueChanges.toRx().map((value) =>value).subscribe((value) => {
             // apply complex cross field validations
             // pre-save the form in the background
-            // make the form data immutable
+            // easy implementation of requirements like undo/redo of valid states
             console.log(value);
         });
 
@@ -42,19 +42,6 @@ export class ModelDrivenForm {
     onSubmitModelBased() {
         console.log("model-based form submitted");
         console.log(this.form);
-    }
-
-    onChangeFirstName() {
-        this.firstName.updateValue("Hello ");
-    }
-
-    onChangeWholeForm() {
-        debugger;
-        //TODO how to update whole form
-        this.form.updateValueAndValidity({
-            firstName: 'Hello',
-            lastName: 'World'
-        }, false);
     }
 
 }
