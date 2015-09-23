@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>AngularJs Digest cycle samples</title>
+</head>
+<body>
+
+    <div ng-app="App">
+
+        <outer>
+
+            <div>
+                Outer:<input ng-model="vm.text">
+                <span>{{vm.text}}</span>
+            </div>
+
+            <middle>
+
+                <div>
+                    Middle: <input ng-model="vm.text">
+                    <span>{{vm.text}}</span>
+                </div>
+
+                <inner>
+
+                    <div>
+                        Inner: <input ng-model="vm.text">
+                        <span>{{vm.text}}</span>
+                    </div>
+                    <button ng-click="inner.click()" >Click Me</button>
+
+                </inner>
+
+            </middle>
+
+        </outer>
+
+    </div>
+
+
+    <script src="https://code.angularjs.org/1.4.6/angular.js"></script>
+    <script src="./app.js"></script>
+
+
+</body>
+</html>
