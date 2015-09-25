@@ -75,3 +75,8 @@ test
 
 .DS_Store
 
+bundle.js
+bundle.js.map
+bundle.min.js
+bundle.min.js.map
+jspm_packages

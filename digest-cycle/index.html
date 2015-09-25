@@ -13,6 +13,7 @@
             <div>
                 Outer:<input ng-model="vm.text">
                 <span>{{vm.text}}</span>
+                <button ng-opt-click="outer.say('Hello Outer')" >Update Outer text = Hello</button>
             </div>
 
             <middle>
@@ -20,6 +21,7 @@
                 <div>
                     Middle: <input ng-model="vm.text">
                     <span>{{vm.text}}</span>
+                    <button ng-opt-click="middle.say('Hello Middle')" >Update Middle text = Hello</button>
                 </div>
 
                 <inner>
@@ -27,6 +29,7 @@
                     <div>
                         Inner: <input ng-model="vm.text">
                         <span>{{vm.text}}</span>
+                        <button ng-opt-click="inner.say('Hello Inner')" >Update Inner text = Hello</button>
                     </div>
                     <button ng-click="inner.click()" >Click Me</button>
 

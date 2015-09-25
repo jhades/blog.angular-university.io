@@ -1,16 +1,15 @@
 {
-  "name": "ng2-play.ts",
-  "version": "1.0.0-SNAPSHOT",
-  "repository": {
-    "type": "git"
+  "scripts": {
+    "bundle": "jspm bundle-sfx --minify src/main bundle.min.js"
   },
-  "devDependencies": {
-    "del": "^1.2.0",
-    "gulp": "^3.9.0",
-    "gulp-typescript": "^2.8.0",
-    "systemjs-builder": "^0.14.4"
-  },
-  "dependencies": {
-    "systemjs": "0.18.4"
+  "jspm": {
+    "dependencies": {
+      "jquery": "github:components/jquery@^2.1.4"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
   }
 }

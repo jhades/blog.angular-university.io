@@ -9,12 +9,6 @@
 <h3>SystemJs Playground - open the console and watch the network tab, not much to see here</h3>
 </body>
 
-<script src="node_modules/systemjs/dist/system-csp-production.js"></script>
-
-<script>
-    System.config({defaultJSExtensions: true});
-
-    System.import('dist/main').catch(console.log.bind(console));
-</script>
+<script src="bundle.min.js"></script>
 
 </html>

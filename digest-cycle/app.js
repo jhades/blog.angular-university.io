@@ -2,12 +2,31 @@
 angular.module('App', []);
 
 angular.module('App')
+    .directive('ngOptClick', function() {
+        return {
+            scope: false,
+            link: function(scope, element, attrs) {
+                element.on('click', function() {
+                    scope.vm.text = 'Hello';
+                    scope.$digest();
+                });
+            }
+        }
+    });
+
+
+angular.module('App')
     .directive('outer', function() {
         return {
             scope:true,
             controllerAs: 'outer',
             controller: function($scope) {
                 $scope.vm = {};
+
+                this.say = function(msg) {
+                    $scope.vm.text = msg;
+                }
+
             }
         }
     });
@@ -28,7 +47,6 @@ angular.module('App')
             controller: function() {
 
                 this.click = function() {
-                    debugger;
                     throw new Error('BUUU');
                 }
 
