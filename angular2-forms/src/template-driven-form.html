@@ -5,11 +5,11 @@
     <form #f="form" (ng-submit)="onSubmitTemplateBased()">
         <p>
             <label>First Name:</label>
-            <input type="text" ng-control="firstName" [(ng-model)]="vm.firstName" required>
+            <input type="text" [(ng-model)]="vm.firstName" required>
         </p>
         <p>
             <label>Password:</label>
-            <input type="password" ng-control="password" [(ng-model)]="vm.password" required>
+            <input type="password" [(ng-model)]="vm.password" required>
         </p>
         <p>
             <button type="submit" [disabled]="!f.valid">Submit</button>
