@@ -1,0 +1,35 @@
+{
+  "name": "ng2-minimal",
+  "version": "1.0.0",
+  "description": "A minimal Angular 2 seed with source maps support ",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc -w",
+    "serve": "http-server -c-1 .",
+    "start": "npm-run-all -p watch serve "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhades/ng2-minimal.git"
+  },
+  "author": "jhades.dev@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jhades/ng2-minimal/issues"
+  },
+  "homepage": "https://github.com/jhades/ng2-minimal#readme",
+  "devDependencies": {
+    "http-server": "0.8.5",
+    "npm-run-all": "1.2.13",
+    "typescript": "1.6.2"
+  },
+  "dependencies": {
+    "es6-promise": "3.0.2",
+    "zone.js": "0.5.10",
+    "es6-shim": "0.33.13",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0",
+    "angular2": "2.0.0-beta.1",
+    "systemjs": "0.19.13"
+  }
+}
