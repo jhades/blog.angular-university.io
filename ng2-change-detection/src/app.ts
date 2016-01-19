@@ -6,7 +6,7 @@ import {ComponentA} from "./ComponentA";
 @Component({
     selector: 'app',
     template: `<div>
-                   <component-a></component-a>
+                   <component-a [counter]="counter"></component-a>
                    <div class="counter">App Counter: {{counter}}</div>
                    <button (click)="onClick()">Trigger Change Detection</button>
                </div>`,

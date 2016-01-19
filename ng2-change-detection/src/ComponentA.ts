@@ -1,6 +1,6 @@
 
 import {ChangeDetectionLoggingComponent} from "./ChangeDetectionLoggingComponent";
-import {Component} from "angular2/core";
+import {Component, Input} from "angular2/core";
 
 @Component({
     selector: 'component-a',
@@ -9,6 +9,8 @@ import {Component} from "angular2/core";
                </div>`
 })
 export class ComponentA extends ChangeDetectionLoggingComponent{
+
+    @Input() counter = 0;
 
     constructor() {
         super('ComponentA');
