@@ -4,7 +4,7 @@ import {
     AfterViewChecked, OnDestroy
 } from "angular2/core";
 
-export class ChangeDetectionLoggingComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+export class ChangeDetectionLoggingComponent implements OnChanges, OnInit, /*DoCheck, */ AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
     constructor(private name: string) {
         
@@ -17,10 +17,10 @@ export class ChangeDetectionLoggingComponent implements OnChanges, OnInit, DoChe
     ngOnInit() {
         console.log(`ngOnInit ${this.name}`);
     }
-
+/*
     ngDoCheck() {
         console.log(`ngDoCheck ${this.name}`);
-    }
+    }*/
 
     ngAfterContentInit() {
         console.log(`ngAfterContentInit ${this.name}`);

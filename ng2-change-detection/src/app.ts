@@ -7,15 +7,15 @@ import {ComponentA} from "./ComponentA";
     selector: 'app',
     template: `<div>
                    <component-a></component-a>
+                   <button (click)="onClick()">Trigger Change Detection</button>
                </div>`,
     directives: [ComponentA]
 })
 export class App {
 
-    message = "";
 
-    onKeyUp(input) {
-        this.message = input.value;
+    onClick() {
+        console.log("Change detection triggered...");
     }
 
 }
