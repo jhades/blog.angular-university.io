@@ -7,14 +7,17 @@ import {ComponentA} from "./ComponentA";
     selector: 'app',
     template: `<div>
                    <component-a></component-a>
+                   <div class="counter">App Counter: {{counter}}</div>
                    <button (click)="onClick()">Trigger Change Detection</button>
                </div>`,
     directives: [ComponentA]
 })
 export class App {
 
+    counter = 0;
 
     onClick() {
+        this.counter ++;
         console.log("Change detection triggered...");
     }
 

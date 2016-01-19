@@ -6,6 +6,8 @@ import {
 
 export class ChangeDetectionLoggingComponent implements OnChanges, OnInit, /*DoCheck, */ AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
+    counter = 0;
+
     constructor(private name: string) {
         
     }

@@ -4,3 +4,9 @@
     width: 500px;
     border: 2px solid black;
 }
+
+.counter {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
