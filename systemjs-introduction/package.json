@@ -4,7 +4,9 @@
   },
   "jspm": {
     "dependencies": {
-      "jquery": "github:components/jquery@^2.1.4"
+      "jquery": "github:components/jquery@^2.1.4",
+      "pablojim/highcharts-ng": "github:pablojim/highcharts-ng@^0.0.11",
+      "timezone-js": "npm:timezone-js@^0.4.13"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
