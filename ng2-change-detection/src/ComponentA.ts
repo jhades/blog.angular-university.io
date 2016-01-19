@@ -18,7 +18,6 @@ export class ComponentA extends ChangeDetectionLoggingComponent implements DoChe
 
     ngDoCheck() {
         console.log(`ngDoCheck ${this.name}`);
-        return true;
     }
 
 }
