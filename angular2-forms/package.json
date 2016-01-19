@@ -1,25 +1,35 @@
 {
-  "name": "ng2-play.ts",
-  "version": "1.0.0-SNAPSHOT",
-  "description": "A minimal Angular2 playground using TypeScript",
+  "name": "ng2-minimal",
+  "version": "1.0.0",
+  "description": "A minimal Angular 2 seed with source maps support ",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc -w",
+    "serve": "http-server -c-1 .",
+    "start": "npm-run-all -p watch serve "
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pkozlowski-opensource/ng2-play.ts.git"
+    "url": "git+https://github.com/jhades/ng2-minimal.git"
   },
+  "author": "jhades.dev@gmail.com",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pkozlowski-opensource/ng2-play.ts/issues"
+    "url": "https://github.com/jhades/ng2-minimal/issues"
   },
-  "homepage": "https://github.com/pkozlowski-opensource/ng2-play.ts#readme",
+  "homepage": "https://github.com/jhades/ng2-minimal#readme",
   "devDependencies": {
-    "connect": "^3.4.0",
-    "del": "^1.2.0",
-    "gulp": "^3.9.0",
-    "gulp-typescript": "^2.8.0",
-    "open": "0.0.5",
-    "serve-static": "^1.10.0"
+    "http-server": "0.8.5",
+    "npm-run-all": "1.2.13",
+    "typescript": "1.6.2"
   },
   "dependencies": {
-    "angular2": "2.0.0-alpha.37",
-    "systemjs": "0.18.4"
+    "es6-promise": "3.0.2",
+    "zone.js": "0.5.10",
+    "es6-shim": "0.33.13",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0",
+    "angular2": "2.0.0-beta.1",
+    "systemjs": "0.19.13"
   }
 }

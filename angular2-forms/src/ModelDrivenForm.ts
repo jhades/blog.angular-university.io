@@ -1,12 +1,27 @@
-import {Component, View} from 'angular2/angular2';
-import {FORM_DIRECTIVES, ControlGroup, Validators, FormBuilder, Control} from 'angular2/forms';
+import {Component} from 'angular2/core';
+import {Validators, FormBuilder,Control} from 'angular2/common';
 
 @Component({
-    selector: "model-driven-form"
-})
-@View({
-    templateUrl: 'model-driven-form.html',
-    directives: [FORM_DIRECTIVES]
+    selector: "model-driven-form",
+    template: `<section class="sample-app-content">
+
+                <h1>Model-based Form Example:</h1>
+
+                <form [ngFormModel]="form" (ngSubmit)="onSubmit()">
+                    <p>
+                        <label>First Name:</label>
+                        <input type="text" ngControl="firstName">
+                    </p>
+                    <p>
+                        <label>Password:</label>
+                        <input type="password" ngControl="password">
+                    </p>
+                    <p>
+                        <button type="submit" [disabled]="!form.valid">Submit</button>
+                    </p>
+                </form>
+
+            </section>`
 })
 export class ModelDrivenForm {
 
@@ -25,7 +40,7 @@ export class ModelDrivenForm {
         // apply complex cross field validations
         // pre-save the form in the background
         // easy implementation of requirements like undo/redo of valid states
-        this.form.valueChanges.toRx()
+        this.form.valueChanges
             .map((value) => {
                 value.firstName = value.firstName.toUpperCase();
                 return value;
@@ -37,15 +52,13 @@ export class ModelDrivenForm {
         });
 
         // observe only one field
-        this.form.controls.firstName.valueChanges.observer({
-            next: (value) => {
+        this.form.controls.firstName.valueChanges.subscribe( value => {
                 console.log('first name changed = ' + value);
-            }
-        });
+            });
 
     }
 
-    onSubmitModelBased() {
+    onSubmit() {
         console.log("model-based form submitted");
         console.log(this.form);
     }

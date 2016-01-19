@@ -1,11 +1,9 @@
-# Angular 2 Form Examples
+# Angular 2 Forms Demo
 
-To install, clone this repo and do:
+Support code for the blog post [Introduction to Angular 2 Forms - Template Driven vs Model Driven Forms](http://blog.jhades.org/introduction-to-angular-2-forms-template-driven-vs-model-driven/) 
+
+# Install and run
 
     npm install
-    
-This should build and start the UI in your default browser:
-
-    gulp
-    
+    npm start
 

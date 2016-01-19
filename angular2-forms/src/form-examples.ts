@@ -1,18 +1,22 @@
-import {Component, View, bootstrap, CORE_DIRECTIVES} from 'angular2/angular2';
-import {FORM_DIRECTIVES, ControlGroup, Validators, FORM_BINDINGS, FormBuilder, Control} from 'angular2/forms';
-import {ModelDrivenForm} from './ModelDrivenForm';
-import {TemplateDrivenForm} from './TemplateDrivenForm';
-
+import {Component, View} from 'angular2/core';
+import {bootstrap} from 'angular2/platform/browser';
+import {ModelDrivenForm} from './ModelDrivenForm.js';
+import {TemplateDrivenForm} from './TemplateDrivenForm.js';
+import 'rxjs/Rx' ;
 
 @Component({
-    selector: 'hello'
-})
-@View({
-    templateUrl: 'form-examples.html',
-    directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, ModelDrivenForm, TemplateDrivenForm]
+    selector: 'app',
+    template: `<div>
+
+		    <template-driven-form></template-driven-form>
+
+    		<model-driven-form></model-driven-form>
+			
+			</div>`,
+	directives: [ModelDrivenForm, TemplateDrivenForm]
 })
 export class Hello {
 
 }
 
-bootstrap(Hello, [FORM_BINDINGS]);
+bootstrap(Hello);
