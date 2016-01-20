@@ -7,7 +7,7 @@ import {ComponentA} from "./ComponentA";
     selector: 'app',
     template: `<div>
                    <component-a [counter]="counter"></component-a>
-                   <div class="counter">App Counter: {{counter}}</div>
+                   <div class="counter">App: {{counter}}</div>
                    <button (click)="onClick()">Trigger Change Detection</button>
                </div>`,
     directives: [ComponentA]

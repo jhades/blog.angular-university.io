@@ -5,7 +5,7 @@ import {Component, Input, DoCheck} from "angular2/core";
 @Component({
     selector: 'component-a',
     template: `<div class="component-a">
-                    <div class="counter">Component A Counter: {{counter}}</div>
+                    <div class="counter">Component A: {{counter}}</div>
                </div>`
 })
 export class ComponentA extends ChangeDetectionLoggingComponent implements DoCheck {
@@ -18,6 +18,7 @@ export class ComponentA extends ChangeDetectionLoggingComponent implements DoChe
 
     ngDoCheck() {
         console.log(`ngDoCheck ${this.name}`);
+        debugger;
     }
 
 }
