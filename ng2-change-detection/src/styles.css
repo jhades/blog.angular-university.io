@@ -5,6 +5,15 @@
     border: 2px solid black;
 }
 
+.component-b {
+    height: 200px;
+    width: 450px;
+    margin-top:10px;
+    margin-left: 10px;
+    border: 2px solid blue;
+}
+
+
 .counter {
     margin-bottom: 10px;
     margin-top: 10px;
