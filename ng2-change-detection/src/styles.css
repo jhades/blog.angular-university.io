@@ -6,7 +6,7 @@
 }
 
 .component-b, .component-c {
-    height: 200px;
+    height: 215px;
     width: 450px;
     margin-top:10px;
     margin-left: 10px;
@@ -34,7 +34,20 @@
     border: 2px solid #40a070;
 }
 
+.component-e {
+    color: #bf616a;
+    border: 2px solid #bf616a;
+}
 
+.component-f {
+    color: #E9DC51;
+    border: 2px solid #E9DC51;
+}
+
+.component-g {
+    color: steelblue;
+    border: 2px solid steelblue;
+}
 
 .counter {
     margin-bottom: 10px;
