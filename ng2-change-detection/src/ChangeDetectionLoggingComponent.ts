@@ -11,31 +11,31 @@ export class ChangeDetectionLoggingComponent implements OnChanges, OnInit, After
     }
     
     ngOnChanges(changes:{}) {
-        console.log(`ngOnChanges ${this.name}` + JSON.stringify(changes));
+        console.log(`${this.name} ngOnChanges` + JSON.stringify(changes));
     }
 
     ngOnInit() {
-        console.log(`ngOnInit ${this.name}`);
+        console.log(`${this.name} ngOnInit`);
     }
 
     ngAfterContentInit() {
-        console.log(`ngAfterContentInit ${this.name}`);
+        console.log(`${this.name} ngAfterContentInit`);
     }
 
     ngAfterContentChecked() {
-        console.log(`ngAfterContentChecked ${this.name}`);
+        console.log(`${this.name} ngAfterContentChecked`);
     }
 
     ngAfterViewInit() {
-        console.log(`ngAfterViewInit ${this.name}`);
+        console.log(`${this.name} ngAfterViewInit`);
     }
 
     ngAfterViewChecked() {
-        console.log(`ngAfterViewChecked ${this.name}`);
+        console.log(`${this.name} ngAfterViewChecked`);
     }
 
     ngOnDestroy() {
-        console.log(`ngOnDestroy ${this.name}`);
+        console.log(`${this.name} ngOnDestroy`);
     }
 
 }

@@ -14,13 +14,7 @@ export class ComponentE extends ChangeDetectionLoggingComponent  {
     @Input() counter = 0;
 
     constructor(private counterStore: CounterStore) {
-        super('ComponentE');
+        super('        ComponentE');
     }
-
-    ngOnChanges(changes:{}) {
-        this.counterStore.increment();
-        console.log(`ngOnChanges ${this.name}` + JSON.stringify(changes));
-    }
-
 
 }

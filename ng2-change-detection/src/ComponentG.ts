@@ -13,7 +13,7 @@ export class ComponentG extends ChangeDetectionLoggingComponent  {
     @Input() counter = 0;
 
     constructor() {
-        super('ComponentG');
+        super('        ComponentG');
     }
 
 }
