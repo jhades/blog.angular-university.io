@@ -1,6 +1,7 @@
 
 import {ChangeDetectionLoggingComponent} from "./ChangeDetectionLoggingComponent";
 import {Component, Input} from "angular2/core";
+import {CounterStore} from "./CounterStore";
 
 @Component({
     selector: 'component-e',
@@ -12,8 +13,14 @@ export class ComponentE extends ChangeDetectionLoggingComponent  {
 
     @Input() counter = 0;
 
-    constructor() {
+    constructor(private counterStore: CounterStore) {
         super('ComponentE');
     }
+
+    ngOnChanges(changes:{}) {
+        this.counterStore.increment();
+        console.log(`ngOnChanges ${this.name}` + JSON.stringify(changes));
+    }
+
 
 }
