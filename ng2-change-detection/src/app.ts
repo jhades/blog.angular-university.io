@@ -2,6 +2,8 @@ import 'angular2/bundles/angular2-polyfills';
 import {Component, enableProdMode} from 'angular2/core';
 import {bootstrap} from 'angular2/platform/browser';
 import {ComponentA} from "./ComponentA";
+import {CounterStore} from "./CounterStore";
+import {Subscriber} from "rxjs/Subscriber";
 
 @Component({
     selector: 'app',
@@ -16,8 +18,12 @@ export class App {
 
     counter = 0;
 
+    constructor(private counterStore: CounterStore) {
+        counterStore.counterObs.subscribe(counter => this.counter += 1);
+    }
+
     onClick() {
-        this.counter ++;
+        this.counterStore.increment();
         console.log("Change detection triggered...");
     }
 
@@ -25,4 +31,4 @@ export class App {
 
 
 //enableProdMode();
-bootstrap(App);
+bootstrap(App, [CounterStore]);

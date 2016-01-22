@@ -29,7 +29,6 @@ export class ComponentB extends ChangeDetectionLoggingComponent  {
     }
 
     ngAfterViewChecked() {
-        this.counter += 1;
         console.log(`ngAfterViewChecked ${this.name}`);
     }
 
