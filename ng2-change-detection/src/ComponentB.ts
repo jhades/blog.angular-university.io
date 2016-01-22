@@ -15,10 +15,15 @@ import {ComponentE} from "./ComponentE";
 })
 export class ComponentB extends ChangeDetectionLoggingComponent  {
 
-    @Input() counter = 0;
+    @Input('counter') _counter = 0;
 
     constructor() {
         super('    ComponentB');
+    }
+
+    get counter() {
+        //debugger;
+        return this._counter;
     }
 
 }
