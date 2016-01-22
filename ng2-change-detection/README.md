@@ -3,9 +3,9 @@
 
 
     - what is this for -> https://angular.io/docs/js/latest/api/core/ChangeDetectorRef-class.html
-    - what is directive hydration mentioned here -> https://github.com/angular/angular/blob/7ae23adaff2990cf6022af9792c449730d451d1d/modules/angular2/src/core/change_detection/dynamic_change_detector.ts        
+    - what is directive hydration mentioned here -> https://github.com/angular/angular/blob/7ae23adaff2990cf6022af9792c449730d451d1d/modules/angular2/src/core/change_detection/dynamic_change_detector.ts
+    - what does each mode mean -> https://angular.io/docs/js/latest/api/core/ChangeDetectionStrategy-enum.html
     - How-To override the change detection of a given component so that it only reacts to even numbers
-    - check what the different changeDetection component options are
     - when are AfterContentChecked and AfterViewChecked called
     
     
