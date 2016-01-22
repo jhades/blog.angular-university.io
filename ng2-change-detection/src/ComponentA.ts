@@ -1,6 +1,6 @@
 
 import {ChangeDetectionLoggingComponent} from "./ChangeDetectionLoggingComponent";
-import {Component, Input, DoCheck} from "angular2/core";
+import {Component, Input} from "angular2/core";
 import {ComponentB} from "./ComponentB";
 
 @Component({
@@ -8,20 +8,15 @@ import {ComponentB} from "./ComponentB";
     directives: [ComponentB],
     template: `<div class="component-a">
                     <component-b [counter]="counter"></component-b>
-                    <div class="counter">Component A: {{counter}}</div>
+                    <div class="counter">A: {{counter}}</div>
                </div>`
 })
-export class ComponentA extends ChangeDetectionLoggingComponent implements DoCheck {
+export class ComponentA extends ChangeDetectionLoggingComponent {
 
     @Input() counter = 0;
 
     constructor() {
         super('ComponentA');
-    }
-
-    ngDoCheck() {
-        console.log(`ngDoCheck ${this.name}`);
-        debugger;
     }
 
 }
