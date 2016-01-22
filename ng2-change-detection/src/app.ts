@@ -1,5 +1,5 @@
 import 'angular2/bundles/angular2-polyfills';
-import {Component} from 'angular2/core';
+import {Component, enableProdMode} from 'angular2/core';
 import {bootstrap} from 'angular2/platform/browser';
 import {ComponentA} from "./ComponentA";
 
@@ -24,4 +24,5 @@ export class App {
 }
 
 
+//enableProdMode();
 bootstrap(App);

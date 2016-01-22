@@ -10,7 +10,6 @@ import {ComponentE} from "./ComponentE";
     template: `<div class="component-b">
                     <component-d [counter]="counter"></component-d>
                     <component-e [counter]="counter"></component-e>
-                    <div class="counter">B: {{counter}}</div>
                </div>`
 })
 export class ComponentB extends ChangeDetectionLoggingComponent  {
@@ -19,6 +18,19 @@ export class ComponentB extends ChangeDetectionLoggingComponent  {
 
     constructor() {
         super('ComponentB');
+    }
+
+    ngOnChanges(changes:{}) {
+        console.log(`ngOnChanges ${this.name}` + JSON.stringify(changes));
+    }
+
+    ngAfterContentChecked() {
+        console.log(`ngAfterContentChecked ${this.name}`);
+    }
+
+    ngAfterViewChecked() {
+        this.counter += 1;
+        console.log(`ngAfterViewChecked ${this.name}`);
     }
 
 }
