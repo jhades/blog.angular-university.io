@@ -4,9 +4,9 @@ import {BehaviorSubject} from 'rxjs/subject/BehaviorSubject';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/scan';
 import 'rxjs/add/operator/zip';
-import {Todo} from "../flux/Todo";
 import {Action, AddTodoAction, ToggleTodoAction, SetVisibilityFilter} from "../flux/actions";
 import {AppState} from "../flux/app-state";
+import {Todo} from "../Todo";
 
 
 // -- helpers
