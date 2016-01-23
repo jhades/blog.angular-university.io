@@ -48,11 +48,11 @@ function combine(s) {
 }
 
 
-export function stateFactory(initState:AppState, actions:Observable<Action>):Observable<AppState> {
+export function appStateFactory(initState:AppState, actionsObs:Observable<Action>):Observable<AppState> {
 
     const appStateObs:Observable<AppState> =
-        todos(initState.todos, actions)
-        .zip(filter(initState.visibilityFilter, actions))
+        todos(initState.todos, actionsObs)
+        .zip(filter(initState.visibilityFilter, actionsObs))
         .map(combine);
 
     return wrapIntoBehavior(initState, appStateObs);

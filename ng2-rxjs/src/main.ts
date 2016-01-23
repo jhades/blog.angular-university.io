@@ -7,14 +7,14 @@ import {TodoList} from "./components/todo-list";
 import {Subject} from "rxjs/Subject";
 import {initState, dispatcher, state} from "./di";
 import {Action} from "./flux/actions";
-import {stateFactory} from "./flux/stateFactory";
+import {appStateFactory} from "./flux/stateFactory";
 
 
 
 const stateAndDispatcher = [
     provide(initState, {useValue: {todos: [], visibilityFilter: 'SHOW_ALL'}}),
     provide(dispatcher, {useValue: new Subject<Action>(null)}),
-    provide(state, {useFactory: stateFactory, deps: [new Inject(initState), new Inject(dispatcher)]})
+    provide(state, {useFactory: appStateFactory, deps: [new Inject(initState), new Inject(dispatcher)]})
 ];
 
 @Component({
