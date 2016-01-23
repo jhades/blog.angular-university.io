@@ -43,6 +43,12 @@ function filter(initState: string, actions: Observable<Action>): Observable<stri
     }, initState);
 }
 
+function wrapIntoBehavior(init, obs) {
+    const res = new BehaviorSubject(init);
+    obs.subscribe(s => res.next(s));
+    return res;
+}
+
 export function stateFn(initState: AppState, actions: Observable<Action>): Observable<AppState> {
     const combine = s => ({todos: s[0], visibilityFilter: s[1]});
 
@@ -51,10 +57,4 @@ export function stateFn(initState: AppState, actions: Observable<Action>): Obser
         zip(filter(initState.visibilityFilter, actions)).
         map(combine);
     return wrapIntoBehavior(initState, appStateObs);
-}
-
-function wrapIntoBehavior(init, obs) {
-    const res = new BehaviorSubject(init);
-    obs.subscribe(s => res.next(s));
-    return res;
 }
