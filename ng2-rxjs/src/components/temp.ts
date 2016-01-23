@@ -7,15 +7,9 @@ import 'rxjs/add/operator/zip';
 import {Action, AddTodoAction, ToggleTodoAction, SetVisibilityFilter} from "../flux/actions";
 import {AppState} from "../flux/app-state";
 import {Todo} from "../Todo";
+import {merge} from "../merge";
 
 
-// -- helpers
-function merge(obj1, obj2) {
-    var obj3 = {};
-    for (var attrname in obj1) { obj3[attrname] = obj1[attrname]; }
-    for (var attrname in obj2) { obj3[attrname] = obj2[attrname]; }
-    return obj3;
-}
 
 // -- statefn
 function todos(initState: Todo[], actions: Observable<Action>): Observable<Todo[]> {
