@@ -1,16 +1,16 @@
 import {Observer} from "rxjs/Observer";
-import {Todo} from "./todo";
 import {Component, Inject} from "angular2/core";
 import {Observable} from "rxjs/Observable";
 import {AppState, Action, ToggleTodoAction, getVisibleTodos} from "./temp";
 import {dispatcher, state} from "../di";
+import {TodoItem} from "./todo-item";
 
 @Component({
     selector: 'todo-list',
     template: `<todo *ngFor="#t of filtered|async"
                 [text]="t.text" [completed]="t.completed"
                 (toggle)="emitToggle(t.id)"></todo>`,
-    directives: [Todo]
+    directives: [TodoItem]
 })
 export class TodoList {
     constructor(@Inject(dispatcher) private dispatcher:Observer<Action>,

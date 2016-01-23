@@ -6,7 +6,7 @@ import {Component, Input, Output, EventEmitter} from "angular2/core";
                {{text}}
              </div>`
 })
-export class Todo {
+export class TodoItem {
     @Input() text: string;
     @Input() completed: boolean;
     @Output() toggle = new EventEmitter();
