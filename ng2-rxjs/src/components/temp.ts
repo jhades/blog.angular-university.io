@@ -18,12 +18,12 @@ function todos(initState: Todo[], actions: Observable<Action>): Observable<Todo[
             const newTodo = {id: action.todoId, text: action.text, completed: false};
             return [...state, newTodo];
         } else {
-            return state.map(t => updateTodo(t, action));
+            return state.map(t => toggleTodo(t, action));
         }
     }, initState);
 }
 
-function updateTodo(todo: Todo, action: Action): Todo {
+function toggleTodo(todo: Todo, action: Action): Todo {
     if (action instanceof ToggleTodoAction) {
         // merge creates a new object using the properties of the passed in objects
         return (action.id !== todo.id) ? todo : merge(todo, {completed: !todo.completed});
@@ -49,7 +49,7 @@ function wrapIntoBehavior(init, obs) {
     return res;
 }
 
-export function stateFn(initState: AppState, actions: Observable<Action>): Observable<AppState> {
+export function stateFactory(initState: AppState, actions: Observable<Action>): Observable<AppState> {
     const combine = s => ({todos: s[0], visibilityFilter: s[1]});
 
     const appStateObs: Observable<AppState> =
