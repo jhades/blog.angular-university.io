@@ -1,0 +1,25 @@
+{
+  "name": "ng2-rxjs-sample",
+  "version": "1.0.0",
+  "description": "An example of how to build an Angular 2 application using RxJs ",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc -w",
+    "serve": "http-server -c-1 .",
+    "start": "npm-run-all -p watch serve "
+  },
+  "repository": {
+    "type": "git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.8.5",
+    "npm-run-all": "^1.2.13",
+    "typescript": "^1.6.2"
+  },
+  "dependencies": {
+    "angular2": "~2.0.0-beta.1",
+    "rxjs": "^5.0.0-beta.1",
+    "systemjs": "~0.19.13"
+  }
+}

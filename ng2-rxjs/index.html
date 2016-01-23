@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ng2-rxjs-example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<app></app>
+
+</body>
+
+<script src="/node_modules/systemjs/dist/system.js"></script>
+<script src="/node_modules/rxjs/bundles/Rx.js"></script>
+<script src="/node_modules/angular2/bundles/angular2-polyfills.js"></script>
+<script src="/node_modules/angular2/bundles/angular2.dev.js"></script>
+
+
+<script>
+   System.import('dist/main.js').catch(console.log.bind(console));
+</script>
+
+</html>
