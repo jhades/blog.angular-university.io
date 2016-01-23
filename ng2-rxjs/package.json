@@ -4,22 +4,24 @@
   "description": "An example of how to build an Angular 2 application using RxJs ",
   "main": "index.js",
   "scripts": {
-    "watch": "tsc -w",
-    "serve": "http-server -c-1 .",
-    "start": "npm-run-all -p watch serve "
+    "start": "webpack-dev-server --colors --display-error-details --content-base src"
   },
   "repository": {
     "type": "git"
   },
   "license": "MIT",
   "devDependencies": {
-    "http-server": "^0.8.5",
-    "npm-run-all": "^1.2.13",
-    "typescript": "^1.6.2"
+    "typescript": "^1.7.5",
+    "ts-loader": "^0.7.2",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
-    "angular2": "~2.0.0-beta.1",
-    "rxjs": "^5.0.0-beta.1",
-    "systemjs": "~0.19.13"
+    "angular2": "^2.0.0-beta.0",
+    "es6-promise": "^3.0.2",
+    "ng2-translate": "^1.2.4",
+    "reflect-metadata": "^0.1.2",
+    "rxjs": "^5.0.0-beta.0",
+    "zone.js": "^0.5.10"
   }
 }
