@@ -1,9 +1,11 @@
 import {Observer} from "rxjs/Observer";
 import {Component, Inject} from "angular2/core";
 import {Observable} from "rxjs/Observable";
-import {AppState, Action, ToggleTodoAction, getVisibleTodos} from "./temp";
 import {dispatcher, state} from "../di";
 import {TodoItem} from "./todo-item";
+import {AppState} from "../flux/app-state";
+import {Action, ToggleTodoAction} from "../flux/actions";
+import {getVisibleTodos} from "./getVisibleTodos";
 
 @Component({
     selector: 'todo-list',

@@ -1,8 +1,9 @@
 import {Component, Input, Inject} from "angular2/core";
 import {Observer} from "rxjs/Observer";
 import {Observable} from "rxjs/Observable";
-import {AppState, SetVisibilityFilter, Action} from "./temp";
 import {dispatcher, state} from "../di";
+import {Action, SetVisibilityFilter} from "../flux/actions";
+import {AppState} from "../flux/app-state";
 
 @Component({
     selector: 'filter-link',

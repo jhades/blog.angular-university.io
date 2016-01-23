@@ -1,7 +1,7 @@
 import {Component, Inject} from "angular2/core";
 import {Observer} from "rxjs/Observer";
-import {Action, AddTodoAction} from "./temp";
 import {dispatcher} from '../di';
+import {Action, AddTodoAction} from "../flux/actions";
 
 var nextId = 0;
 

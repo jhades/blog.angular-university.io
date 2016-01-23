@@ -4,6 +4,9 @@ import {BehaviorSubject} from 'rxjs/subject/BehaviorSubject';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/scan';
 import 'rxjs/add/operator/zip';
+import {Todo} from "../flux/Todo";
+import {Action, AddTodoAction, ToggleTodoAction, SetVisibilityFilter} from "../flux/actions";
+import {AppState} from "../flux/app-state";
 
 
 // -- helpers
@@ -12,26 +15,6 @@ function merge(obj1, obj2) {
     for (var attrname in obj1) { obj3[attrname] = obj1[attrname]; }
     for (var attrname in obj2) { obj3[attrname] = obj2[attrname]; }
     return obj3;
-}
-
-
-// -- state
-export interface Todo { id: number; text: string; completed: boolean; }
-export interface AppState { todos: Todo[]; visibilityFilter: string; }
-
-
-// -- actions
-export class AddTodoAction       { constructor(public todoId: number, public text: string){} }
-export class ToggleTodoAction    { constructor(public id: number){} }
-export class SetVisibilityFilter { constructor(public filter: string){} }
-export type Action = AddTodoAction|ToggleTodoAction|SetVisibilityFilter;
-
-export function getVisibleTodos(todos: Todo[], filter: string): Todo[] {
-    return todos.filter(t => {
-        if (filter === "SHOW_ACTIVE") return !t.completed;
-        if (filter === "SHOW_COMPLETED") return t.completed;
-        return true;
-    });
 }
 
 // -- statefn
