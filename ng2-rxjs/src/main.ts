@@ -28,6 +28,6 @@ const stateAndDispatcher = [
 class TodoApp {
 }
 
-enableProdMode();
+enableProdMode(); // due to https://github.com/angular/angular/pull/5996
 bootstrap(TodoApp)
     .catch(err => console.error(err));

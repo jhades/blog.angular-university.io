@@ -11,7 +11,6 @@ import {merge} from "../merge";
 
 
 
-// -- statefn
 function todos(initState: Todo[], actions: Observable<Action>): Observable<Todo[]> {
     return actions.scan((state, action) => {
         if (action instanceof AddTodoAction) {
