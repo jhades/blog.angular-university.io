@@ -101,9 +101,9 @@ const stateAndDispatcher = [
 // -- Components
 @Component({
     selector: 'todo',
-    template: `<span (click)="toggle.next()" [style.textDecoration]="textEffect">
+    template: `<div (click)="toggle.next()" [style.textDecoration]="textEffect">
                {{text}}
-             </span>`
+             </div>`
 })
 class Todo {
     @Input() text: string;
