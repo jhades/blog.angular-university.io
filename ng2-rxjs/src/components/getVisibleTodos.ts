@@ -1,4 +1,5 @@
-import {Todo} from "../flux/Todo";
+
+import {Todo} from "../Todo";
 
 export function getVisibleTodos(todos: Todo[], filter: string): Todo[] {
     return todos.filter(t => {
