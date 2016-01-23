@@ -17,7 +17,6 @@ export class ComponentD extends ChangeDetectionLoggingComponent  {
     }
 
     ngAfterContentChecked() {
-        debugger;
         console.log(`${this.name} ngAfterContentChecked`);
     }
 
