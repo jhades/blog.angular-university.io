@@ -7,7 +7,8 @@ import {TodoList} from "./components/todo-list";
 import {Subject} from "rxjs/Subject";
 import {initState, dispatcher, state} from "./di";
 import {Action} from "./flux/actions";
-import {stateFactory} from "./flux/temp";
+import {stateFactory} from "./flux/stateFactory";
+
 
 
 const stateAndDispatcher = [
