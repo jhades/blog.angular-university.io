@@ -4,9 +4,10 @@ import {Component, provide, Inject, enableProdMode} from "angular2/core";
 import {Footer} from "./components/footer";
 import {AddTodo} from "./components/add-todo";
 import {TodoList} from "./components/todo-list";
-import {Action, stateFactory} from "./components/temp";
 import {Subject} from "rxjs/Subject";
 import {initState, dispatcher, state} from "./di";
+import {Action} from "./flux/actions";
+import {stateFactory} from "./flux/temp";
 
 
 const stateAndDispatcher = [
