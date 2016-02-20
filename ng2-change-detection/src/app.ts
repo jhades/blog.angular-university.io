@@ -4,6 +4,7 @@ import {bootstrap} from 'angular2/platform/browser';
 import {ComponentA} from "./ComponentA";
 import {CounterStore} from "./CounterStore";
 import {Subscriber} from "rxjs/Subscriber";
+import {enableDebugTools} from "angular2/src/platform/browser/tools/tools";
 
 @Component({
     selector: 'app',
@@ -30,5 +31,7 @@ export class App {
 }
 
 
-//enableProdMode();
-bootstrap(App, [CounterStore]);
+
+bootstrap(App, [CounterStore]).then((appRef) => {
+    enableDebugTools(appRef);
+});

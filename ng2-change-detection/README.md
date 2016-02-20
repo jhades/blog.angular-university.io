@@ -7,7 +7,7 @@
     - what does each mode mean -> https://angular.io/docs/js/latest/api/core/ChangeDetectionStrategy-enum.html
     - How-To override the change detection of a given component so that it only reacts to even numbers
     - when are AfterContentChecked and AfterViewChecked called
-    
+    - Do an example with immutable.js to see how a section of the tree is bypassed if proper configuration is in place
     
     
 ### DONE
