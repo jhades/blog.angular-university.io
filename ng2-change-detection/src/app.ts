@@ -3,20 +3,21 @@
 import 'angular2/bundles/angular2-polyfills';
 import {Component} from 'angular2/core';
 import {bootstrap} from 'angular2/platform/browser';
-
+import {todos as initialData} from './test_data';
+import {TodoList} from "./todo_list";
 
 @Component({
     selector: 'app',
+    directives: [TodoList],
     template: `<div>
-
+                    <todo-list [todos]="todos"></todo-list>
                </div>`
 })
 export class App {
 
-    counter = 0;
+    todos = initialData;
+
 
 }
-
-
 
 bootstrap(App);
