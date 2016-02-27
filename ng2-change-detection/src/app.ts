@@ -1,37 +1,22 @@
+///<reference path="../node_modules/angular2/typings/browser.d.ts"/>
+
 import 'angular2/bundles/angular2-polyfills';
-import {Component, enableProdMode} from 'angular2/core';
+import {Component} from 'angular2/core';
 import {bootstrap} from 'angular2/platform/browser';
-import {ComponentA} from "./ComponentA";
-import {CounterStore} from "./CounterStore";
-import {Subscriber} from "rxjs/Subscriber";
-import {enableDebugTools} from "angular2/src/platform/browser/tools/tools";
+
 
 @Component({
     selector: 'app',
     template: `<div>
-                   <component-a [counter]="counter"></component-a>
-                   <div class="counter">App: {{counter}}</div>
-                   <button (click)="onClick()">Trigger Change Detection</button>
-               </div>`,
-    directives: [ComponentA]
+
+               </div>`
 })
 export class App {
 
     counter = 0;
 
-    constructor(private counterStore: CounterStore) {
-        counterStore.counterObs.subscribe(counter => this.counter += 1);
-    }
-
-    onClick() {
-        this.counterStore.increment();
-        console.log("Change detection triggered...");
-    }
-
 }
 
 
 
-bootstrap(App, [CounterStore]).then((appRef) => {
-    enableDebugTools(appRef);
-});
+bootstrap(App);
