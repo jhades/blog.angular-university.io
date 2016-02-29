@@ -11,10 +11,6 @@ import {Component,Input} from "angular2/core";
 })
 export class TodoList {
 
-    ngDoCheck() {
-        debugger;
-    }
-
     @Input()
     todos: Array<any>;
 
