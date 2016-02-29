@@ -18,7 +18,8 @@ export class TodoList {
 
     onToggle(todo) {
         console.log("toggling todo..");
-        todo.completed = !todo.completed;
+        //todo.completed = !todo.completed;
+        this.todos[0].completed = !this.todos[0].completed;
     }
 
 }
