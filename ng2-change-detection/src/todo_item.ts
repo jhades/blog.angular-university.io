@@ -15,7 +15,7 @@ export class TodoItem {
     toggle = new EventEmitter<Object>();
 
     onToggle() {
-        this.toggle.emit(null);
+        this.toggle.emit(this.todo);
     }
 
 }

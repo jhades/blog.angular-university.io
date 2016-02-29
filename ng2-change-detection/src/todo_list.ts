@@ -8,7 +8,7 @@ import {Todo} from "./todo";
     directives: [TodoItem],
     template: `<ul>
                     <li *ngFor="#todo of todos;">
-                        <todo-item [todo]="todo" (toggle)="onToggle(todo)"></todo-item>
+                        <todo-item [todo]="todo" (toggle)="onToggle($event)"></todo-item>
                     </li>
                </ul>`
 })
