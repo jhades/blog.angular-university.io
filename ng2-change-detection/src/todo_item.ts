@@ -1,14 +1,15 @@
 
 import {Component,Input,Output, EventEmitter} from 'angular2/core';
+import {Todo} from "./todo";
 
 @Component({
     selector: 'todo-item',
-    template: `<span class="todo noselect" (click)="onToggle()">{{todo.description}} - completed: {{todo.completed}}</span>`
+    template: `<span class="todo noselect" (click)="onToggle()">{{todo.owner.firstname}} - {{todo.description}} - completed: {{todo.completed}}</span>`
 })
 export class TodoItem {
 
     @Input()
-    todo:Object;
+    todo:Todo;
 
     @Output()
     toggle = new EventEmitter<Object>();

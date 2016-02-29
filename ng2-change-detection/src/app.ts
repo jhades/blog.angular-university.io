@@ -5,23 +5,26 @@ import {Component, NgZone, OnChanges, DoCheck, enableProdMode} from 'angular2/co
 import {bootstrap} from 'angular2/platform/browser';
 import {todos as initialData} from './test_data';
 import {TodoList} from "./todo_list";
+import {Todo} from "./todo";
 
 @Component({
     selector: 'app',
     directives: [TodoList],
     template: `<div>
                     <todo-list [todos]="todos"></todo-list>
+                    <button (click)="toggleFirst()">Change First Name</button>
                </div>`
 })
 export class App {
 
-    todos = initialData;
+    todos:Array<Todo> = initialData;
 
-    constructor(ngZone: NgZone) {
+    constructor() {
 
-        ngZone.run(() => {
-            console.log('this code will run inside the Angular zone...');
-        });
+    }
+
+    toggleFirst() {
+        this.todos[0].owner.firstname = "Changed!";
     }
 
 }
