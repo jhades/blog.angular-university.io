@@ -1,11 +1,13 @@
 
 import {Component,Input} from "angular2/core";
+import {TodoItem} from "./todo_item";
 
 @Component({
     selector: 'todo-list',
+    directives: [TodoItem],
     template: `<ul>
                     <li *ngFor="#todo of todos;">
-                        <span>{{todo.description}}</span>
+                        <todo-item [todo]="todo"></todo-item>
                     </li>
                </ul>`
 })

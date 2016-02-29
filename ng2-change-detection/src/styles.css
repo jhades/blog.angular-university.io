@@ -1,56 +1,8 @@
 
-.component-a {
-    height: 500px;
-    width: 500px;
-    border: 2px solid black;
+.todo {
+    cursor:pointer;
 }
 
-.component-b, .component-c {
-    height: 215px;
-    width: 450px;
-    margin-top:10px;
-    margin-left: 10px;
-}
-
-.component-b {
-    color: blue;
-    border: 2px solid blue;
-}
-
-.component-c {
-    color: #990073;
-    border: 2px solid #990073;
-}
-
-.component-d, .component-e, .component-f, .component-g {
-    height: 75px;
-    width: 370px;
-    margin-top:10px;
-    margin-left: 10px;
-}
-
-.component-d {
-    color: #40a070;
-    border: 2px solid #40a070;
-}
-
-.component-e {
-    color: #bf616a;
-    border: 2px solid #bf616a;
-}
-
-.component-f {
-    color: #E9DC51;
-    border: 2px solid #E9DC51;
-}
-
-.component-g {
-    color: steelblue;
-    border: 2px solid steelblue;
-}
-
-.counter {
-    margin-bottom: 10px;
-    margin-top: 10px;
-    margin-left: 10px;
+.completed {
+    text-decoration: line-through;
 }
