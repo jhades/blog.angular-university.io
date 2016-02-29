@@ -8,7 +8,7 @@ export class Todo {
 
     get completed() {
         if (this.id == 1 && this._completed) {
-            //debugger;
+            debugger;
         }
         return this._completed;
     }

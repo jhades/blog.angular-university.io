@@ -24,7 +24,7 @@ export class App {
     }
 
     toggleFirst() {
-        this.todos[0].owner.firstname = "Changed!";
+        this.todos[0].owner.firstname = "Changed!!";
     }
 
 }
