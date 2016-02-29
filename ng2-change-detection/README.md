@@ -10,3 +10,4 @@ Support code for the blog post [Angular 2 Change Detection In Practice](http://b
 # TODO 
 
 shrinkwrap
+update main README 
