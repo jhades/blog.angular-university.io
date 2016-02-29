@@ -7,7 +7,7 @@ import {TodoItem} from "./todo_item";
     directives: [TodoItem],
     template: `<ul>
                     <li *ngFor="#todo of todos;">
-                        <todo-item [todo]="todo"></todo-item>
+                        <todo-item [todo]="todo" (toggle)="onToggle(todo)"></todo-item>
                     </li>
                </ul>`
 })
@@ -15,5 +15,10 @@ export class TodoList {
 
     @Input()
     todos: Array<any>;
+
+    onToggle(todo) {
+        console.log("toggling todo..");
+        todo.completed = !todo.completed;
+    }
 
 }

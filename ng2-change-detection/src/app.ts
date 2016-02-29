@@ -11,7 +11,6 @@ import {TodoList} from "./todo_list";
     directives: [TodoList],
     template: `<div>
                     <todo-list [todos]="todos"></todo-list>
-                    <button>Complete Task 2</button>
                </div>`
 })
 export class App {
