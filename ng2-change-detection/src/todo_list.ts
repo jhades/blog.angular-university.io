@@ -1,10 +1,12 @@
 
-import {Component,Input} from "angular2/core";
+import {Component,Input, ChangeDetectionStrategy} from "angular2/core";
 import {TodoItem} from "./todo_item";
 import {Todo} from "./todo";
 
 @Component({
     selector: 'todo-list',
+    // uncomment to switch to on-push mode
+    changeDetection: ChangeDetectionStrategy.OnPush,
     directives: [TodoItem],
     template: `<ul>
                     <li *ngFor="#todo of todos;">

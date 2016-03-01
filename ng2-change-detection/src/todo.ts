@@ -8,6 +8,7 @@ export class Todo {
 
     get completed() {
         if (this.id == 1 && this._completed) {
+            // uncomment to see the change detector on the dev tools
             //debugger;
         }
         return this._completed;
