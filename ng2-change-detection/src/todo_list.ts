@@ -6,7 +6,7 @@ import {Todo} from "./todo";
 @Component({
     selector: 'todo-list',
     // uncomment to switch to on-push mode
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    //changeDetection: ChangeDetectionStrategy.OnPush,
     directives: [TodoItem],
     template: `<ul>
                     <li *ngFor="#todo of todos;">
