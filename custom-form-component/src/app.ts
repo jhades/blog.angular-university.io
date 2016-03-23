@@ -36,6 +36,7 @@ export class App {
             anotherSearch: this.anotherSearch
         });
 
+        this.form.valueChanges.subscribe((value) => console.log(value));
     }
 
     onGo() {
