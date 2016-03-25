@@ -15,8 +15,9 @@ import {SearchBoxValueAccessor} from "./search_box_value_accessor";
                     <input ngControl="firstName"  placeholder="First Name">
                     <input [ngFormControl]="lastName" placeholder="Last Name">
 
-                    <search-box [label]='"Search 1"' ngControl="search" [(ngModel)]="search"></search-box>
-                    <search-box [label]='"Search 2"' [ngFormControl]="anotherSearch"></search-box>
+                    <search-box [label]='"Search 1"' [(ngModel)]="search"></search-box>
+                    <search-box [label]='"Search 2"' ngControl="search" [(ngModel)]="search"></search-box>
+                    <search-box [label]='"Search 3"' [ngFormControl]="anotherSearch"></search-box>
        
                     <button (click)="onGo()">Go</button>
         

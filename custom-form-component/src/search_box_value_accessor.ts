@@ -22,7 +22,6 @@ export class SearchBoxValueAccessor implements ControlValueAccessor {
     }
 
     writeValue(value: any): void {
-        console.log(value);
         var normalizedValue = isBlank(value) ? '' : value;
         this._renderer.setElementProperty(this._elementRef.nativeElement, 'search', normalizedValue);
     }
