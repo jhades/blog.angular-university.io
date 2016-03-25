@@ -1,0 +1,7 @@
+<div>
+    <input
+    #input placeholder="{{label}}" (keydown)="onSearch($event, input.value)" (blur)="onBlur()">
+    <button
+    (click)="onClear(input)">Clear
+</button>
+        </div>
