@@ -1,6 +1,7 @@
-import {Directive, Renderer, ElementRef, forwardRef, Provider} from "angular2/core";
-import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "angular2/common";
-import {isBlank} from "angular2/src/facade/lang";
+import {Directive, Renderer, ElementRef, forwardRef, Provider} from "@angular/core";
+import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/common";
+import {isBlank} from "@angular/common/src/facade/lang";
+
 
 const CUSTOM_VALUE_ACCESSOR = new Provider(
     NG_VALUE_ACCESSOR, {useExisting: forwardRef(() => SearchBoxValueAccessor), multi: true});

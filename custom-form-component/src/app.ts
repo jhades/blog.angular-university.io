@@ -1,8 +1,7 @@
-///<reference path="../node_modules/angular2/typings/browser.d.ts"/>
 
-import {Component} from 'angular2/core';
-import {bootstrap} from 'angular2/platform/browser';
-import {FormBuilder, ControlGroup, Validators, Control} from 'angular2/common';
+import {Component} from '@angular/core';
+import {bootstrap} from "@angular/platform-browser-dynamic";
+import {FormBuilder, ControlGroup, Validators, Control} from '@angular/common';
 import {SearchBox} from "./search_box";
 import {SearchBoxValueAccessor} from "./search_box_value_accessor";
 
