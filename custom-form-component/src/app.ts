@@ -12,11 +12,12 @@ import {SearchBoxValueAccessor} from "./search_box_value_accessor";
 
                     <input ngControl="username" [(ngModel)]="username"  placeholder="Username" required>
                     <input ngControl="firstName"  placeholder="First Name">
-                    <input [ngFormControl]="lastName" placeholder="Last Name">
+                    <input [ngFormControl]="lastName" placeholder="Last Name"> 
 
-                    <search-box [label]='"Search 1"' [(ngModel)]="search"></search-box>
-                    <search-box [label]='"Search 2"' ngControl="search" [(ngModel)]="search"></search-box>
-                    <search-box [label]='"Search 3"' [ngFormControl]="anotherSearch"></search-box>
+                    <search-box [label]='"NgModel Works !"' [(ngModel)]="lastSearch"></search-box> 
+                    
+<!--                    <search-box [label]='"Search 2"' ngControl="search" [(ngModel)]="search"></search-box>
+                    <search-box [label]='"Search 3"' [ngFormControl]="anotherSearch"></search-box>-->
        
                     <button (click)="onGo()">Go</button>
         
@@ -28,7 +29,7 @@ export class App {
     form: ControlGroup;
 
     username:string;
-    search:string;
+    lastSearch:string;
 
     lastName = new Control("", Validators.required);
 
@@ -39,15 +40,14 @@ export class App {
             username: ["", Validators.required],
             firstName: ["", Validators.required],
             lastName: this.lastName,
-            search: ["", Validators.required],
-            anotherSearch: this.anotherSearch
+            lastSearch: ["", Validators.required]
         });
 
         this.form.valueChanges.subscribe((value) => console.log(value));
     }
 
     onGo() {
-        console.log(this.username + " / " + this.search + " / " + this.anotherSearch.value);
+        console.log('last search = ' + this.lastSearch);
     }
 
     
