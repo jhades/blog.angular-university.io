@@ -80,3 +80,6 @@ bundle.js.map
 bundle.min.js
 bundle.min.js.map
 jspm_packages
+
+typings
+
