@@ -11,7 +11,7 @@ import {FormGroup, FormControl, Validators, FormBuilder, REACTIVE_FORM_DIRECTIVE
 
                 <h1>Model-based Form Example:</h1>
 
-                <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <form [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off">
                     <p>
                         <label>First Name:</label>
                         <input type="text" formControlName="firstName">
@@ -52,7 +52,7 @@ export class ModelDrivenForm {
             .filter((value) => this.form.valid)
             .subscribe((value) => {
 
-            alert("Model Driven Form valid value: vm = " + JSON.stringify(value));
+            console.log("Valid form value: " + JSON.stringify(value));
         });
 
         // observe only one field

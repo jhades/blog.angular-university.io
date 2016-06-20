@@ -7,7 +7,7 @@ import {Component} from '@angular/core';
 
 				    <h1>Template-based Form Example:</h1>
 
-				    <form #f="ngForm" (ngSubmit)="onSubmitTemplateBased()">
+				    <form #f="ngForm" (ngSubmit)="onSubmitTemplateBased()" autocomplete="off">
 				        <p>
 				            <label>First Name:</label>
 				            <input type="text" [(ngModel)]="user.firstName" name="firstName" required>
