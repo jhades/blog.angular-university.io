@@ -1,5 +1,5 @@
 
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 
 @Component({
     selector: "template-driven-form",
@@ -10,11 +10,11 @@ import {Component} from 'angular2/core';
 				    <form #f="ngForm" (ngSubmit)="onSubmitTemplateBased()">
 				        <p>
 				            <label>First Name:</label>
-				            <input type="text" [(ngModel)]="vm.firstName" required>
+				            <input type="text" [(ngModel)]="user.firstName" name="firstName" required>
 				        </p>
 				        <p>
 				            <label>Password:</label>
-				            <input type="password" [(ngModel)]="vm.password" required>
+				            <input type="password" [(ngModel)]="user.password" name="password" required>
 				        </p>
 				        <p>
 				            <button type="submit" [disabled]="!f.valid">Submit</button>
@@ -25,11 +25,11 @@ import {Component} from 'angular2/core';
 })
 export class TemplateDrivenForm {
 
-    vm: Object = {};
+    user = {};
 
     onSubmitTemplateBased() {
-        alert("Template Driven Form submitted: vm = " + JSON.stringify(this.vm));
-        console.log(this.vm);
+        alert("Template Driven Form submitted: vm = " + JSON.stringify(this.user));
+        console.log(this.user);
     }
 
 }

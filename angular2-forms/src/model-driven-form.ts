@@ -1,20 +1,24 @@
-import {Component} from 'angular2/core';
-import {Validators, FormBuilder,Control} from 'angular2/common';
+
+import {Component} from '@angular/core';
+import "rxjs/add/operator/map";
+import "rxjs/add/operator/filter";
+import {FormGroup, FormControl, Validators, FormBuilder, REACTIVE_FORM_DIRECTIVES} from '@angular/forms';
 
 @Component({
     selector: "model-driven-form",
+    directives: [REACTIVE_FORM_DIRECTIVES],
     template: `<section class="sample-app-content">
 
                 <h1>Model-based Form Example:</h1>
 
-                <form [ngFormModel]="form" (ngSubmit)="onSubmit()">
+                <form [formGroup]="form" (ngSubmit)="onSubmit()">
                     <p>
                         <label>First Name:</label>
-                        <input type="text" ngControl="firstName">
+                        <input type="text" formControlName="firstName">
                     </p>
                     <p>
                         <label>Password:</label>
-                        <input type="password" ngControl="password">
+                        <input type="password" formControlName="password">
                     </p>
                     <p>
                         <button type="submit" [disabled]="!form.valid">Submit</button>
@@ -26,8 +30,8 @@ import {Validators, FormBuilder,Control} from 'angular2/common';
 export class ModelDrivenForm {
 
 
-    form: ControlGroup;
-    firstName: Control = new Control("", Validators.required);
+    form: FormGroup;
+    firstName: FormControl = new FormControl("", Validators.required);
 
     constructor(fb: FormBuilder) {
         this.form = fb.group({
@@ -52,7 +56,7 @@ export class ModelDrivenForm {
         });
 
         // observe only one field
-        this.form.controls.firstName.valueChanges.subscribe( value => {
+        this.form.controls['firstName'].valueChanges.subscribe( value => {
                 console.log('first name changed = ' + value);
             });
 
