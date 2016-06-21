@@ -10,11 +10,11 @@ import {Component} from '@angular/core';
 				    <form #f="ngForm" (ngSubmit)="onSubmitTemplateBased()" autocomplete="off">
 				        <p>
 				            <label>First Name:</label>
-				            <input type="text" [(ngModel)]="user.firstName" name="firstName" required>
+				            <input type="text" name="firstName" required ngModel>
 				        </p>
 				        <p>
 				            <label>Password:</label>
-				            <input type="password" [(ngModel)]="user.password" name="password" required>
+				            <input type="password" name="password" required ngModel>
 				        </p>
 				        <p>
 				            <button type="submit" [disabled]="!f.valid">Submit</button>
@@ -25,7 +25,10 @@ import {Component} from '@angular/core';
 })
 export class TemplateDrivenForm {
 
-    user = {};
+    user = {
+        firstName: 'Vasco',
+        password:  'test'
+    };
 
     onSubmitTemplateBased() {
         alert("Template Driven Form submitted: vm = " + JSON.stringify(this.user));
