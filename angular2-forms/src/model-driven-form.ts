@@ -21,6 +21,7 @@ import {FormGroup, FormControl, Validators, FormBuilder, REACTIVE_FORM_DIRECTIVE
                     </p>
                     <p>
                         <button type="submit" [disabled]="!form.valid">Submit</button>
+                        <button (click)="updateForm()">Update</button>
                         <button (click)="reset()">Cancel</button>
                     </p>
                 </form>
@@ -69,6 +70,10 @@ export class ModelDrivenForm {
 
     reset() {
         this.form.reset();
+    }
+
+    updateForm() {
+        this.form.patchValue({firstName: 'Johny'});
     }
 
 }
