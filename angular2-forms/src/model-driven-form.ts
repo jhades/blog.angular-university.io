@@ -21,7 +21,8 @@ import {FormGroup, FormControl, Validators, FormBuilder, REACTIVE_FORM_DIRECTIVE
                     </p>
                     <p>
                         <button type="submit" [disabled]="!form.valid">Submit</button>
-                        <button (click)="updateForm()">Update</button>
+                        <button (click)="partialUpdate()">Partial Update</button>
+                        <button (click)="fullUpdate()">Full Update</button>
                         <button (click)="reset()">Cancel</button>
                     </p>
                 </form>
@@ -72,8 +73,13 @@ export class ModelDrivenForm {
         this.form.reset();
     }
 
-    updateForm() {
-        this.form.patchValue({firstName: 'Johny'});
+    fullUpdate() {
+        this.form.patchValue({firstName: 'Partial', password: 'monkey'});
+    }
+
+
+    partialUpdate() {
+        this.form.patchValue({firstName: 'Partial'});
     }
 
 }
