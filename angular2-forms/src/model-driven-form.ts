@@ -21,6 +21,7 @@ import {FormGroup, FormControl, Validators, FormBuilder, REACTIVE_FORM_DIRECTIVE
                     </p>
                     <p>
                         <button type="submit" [disabled]="!form.valid">Submit</button>
+                        <button (click)="reset()">Cancel</button>
                     </p>
                 </form>
 
@@ -45,7 +46,7 @@ export class ModelDrivenForm {
         // easy implementation of requirements like undo/redo of valid states
         this.form.valueChanges
             .map((value) => {
-                value.firstName = value.firstName.toUpperCase();
+                value.firstName = value.firstName ? value.firstName.toUpperCase() : "";
                 return value;
             })
             .filter((value) => this.form.valid)
@@ -64,6 +65,10 @@ export class ModelDrivenForm {
     onSubmit() {
         console.log("model-based form submitted");
         console.log(this.form);
+    }
+
+    reset() {
+        this.form.reset();
     }
 
 }
