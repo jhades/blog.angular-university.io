@@ -6,7 +6,6 @@ import {FormGroup, FormControl, Validators, FormBuilder, REACTIVE_FORM_DIRECTIVE
 
 @Component({
     selector: "model-driven-form",
-    directives: [REACTIVE_FORM_DIRECTIVES],
     template: `<section class="sample-app-content">
 
                 <h1>Model-based Form Example:</h1>
